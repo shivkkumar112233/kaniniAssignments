@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         var gameScore ={
+            or_word:"",
+            cows:0,
+            bulls:0
+         }
+
+         function score(){
+            let cows=0;
+            let bulls=0;
+            text1=document.getElementById("original").value;
+            text2=document.getElementById("dup").value;
+            if(text1.length!=text2.length){
+                alert("enter correct word");
+                document.getElementById("dup").value="";
+            }
+            t1=text1.split('');
+            t2=text2.split('');
+            for(let i=0;i<t1.length;i++)
+            {
+                for(let j=0;j<t2.length;j++)
+                {
+                    if(t1[i]==t2[j]){
+                        if(i==j){
+                        console.log(t1[i]);
+                        cows+=1;
+                        }
+                        else{
+                            bulls+=1;
+                        }    
+                    }     
+               }
+            }
+           gameScore = new Object();
+           gameScore.or_word=text2;
+           gameScore.cows=cows;
+           gameScore.bulls=bulls;
+           console.log(gameScore);
+           console.log(bulls);
+           console.log(cows);
+           if(cows==4){
+            //alert("you win");
+            document.getElementById("res").innerHTML="you win";
+           }
+           else{
+            document.getElementById("res").innerHTML="you loose try again try again!!!!";
+            
+           }
+           document.getElementById("dup").value="";
+        }
+        function reset(){
+            document.getElementById("dup").value="";
+            document.getElementById("res").innerHTML="";
+        }
+    </script>
+    <style>
+        .header{
+            background-color:rgb(191, 85, 196);
+            color:white;
+            font-size: xx-large;
+            text-align: center;
+            text-transform: capitalize;
+            padding: 12px;
+        }
+        #container{
+            padding: 23px;
+           position: relative;
+           left: 300px;
+           bottom: -100px;
+           border: 1px solid ;
+           border-radius: 12px;
+        }
+        button{
+            height: 20px;
+            background-color: rgb(230, 92, 207);
+            color: white;
+            border-radius: 12px;
+            
+        }
+        button:hover{
+            box-shadow: 12px 10px 10px orangered;
+        }
+        #res{
+            background-color: blanchedalmond;
+            position: absolute;
+            bottom: 120px;
+            text-align: center;
+            width:100%;
+            color: dark;
+            font-size: xx-large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bolder;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        cow and bull game
+    </div>
+    <table id="container">
+        <tr>
+            <td>
+                 original word
+
+            </td>
+            <td>
+                <input type="password" name="" id="original" value="word">
+           </td>
+        </tr>
+        <tr>
+            <td>
+                 crack word
+
+            </td>
+            <td>
+                <input type="text" name="" id="dup">
+           </td>
+        </tr>
+        <tr>
+
+        </tr>
+        <tr>
+            
+        </tr>
+        <br><br>
+        <tr>
+            <td>
+                 <button onclick="score()">find</button>
+
+            </td>
+            <td>
+                <button onclick="reset()">reset</button>
+           </td>
+        </tr>
+       
+    </table>
+
+
+    <div  id="res">
+        
+    </div>
+    
+   
+    
+</body>
+</html>
