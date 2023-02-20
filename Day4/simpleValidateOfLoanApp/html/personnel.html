@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function submit(){
+            let userName=document.getElementById("user").value;
+            console.log(userName);
+            if(userName==""){
+                alert("please enter username");
+            }
+        }
+    </script>
+    <style>
+        .main_header{
+            background-color: #0914f0;
+        }
+        #img_1{
+            border-radius: 50%;
+        }
+        .head{
+            color: white;
+            padding: 10px;
+            margin: 12px;
+            font-size: xx-large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-transform: capitalize;
+            position: relative;
+            left:-400px;
+            float:right;
+        }
+        ul{
+            list-style-type: none;
+            cursor: pointer;
+           
+           padding: 10px;
+           
+
+        }
+        .sub_header{
+            background-color: rgb(54, 160, 231);
+            padding: 10px;
+            
+        }
+        li{
+            display: inline;
+            padding: 18px;
+            color: blue;
+            font-size: larger;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            
+        }
+        .form{
+            background-color: azure;
+            padding: 12px;
+        }
+        #footer{
+        height: 200px;
+        background-color: black;
+        color: white;
+        column-count: 2;
+       
+       }
+       #sub_foot{
+        background-color: rgb(48, 47, 47);
+        color: white;
+        padding: 10px;
+       }
+       h3{
+        text-align: center;
+       }
+       a{
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+       }
+       li a:hover{
+        cursor: pointer;
+       }
+       .forms{
+        padding: 12px;
+        margin: 12px;
+        position: relative;
+        left:300px;
+        border-radius: 12px;
+        border: 1px solid;
+        width:fit-content
+       }
+       label{
+        font-family: 'Times New Roman', Times, serif;
+       }
+       #reset{
+        position: relative;
+        left:50px;
+       }
+       p{
+        color: red;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="main_header">
+        <div class="heads">
+            <img src="/simpleValidateOfLoanApp/images/th.jpeg" alt=""  id=" img_1" width="100px" >
+            <div class="head">
+                your loan application
+            </div>
+
+        </div>
+    </div>
+   
+    <div class="sub_header">
+        <ul>
+            <li><a href="/simpleValidateOfLoanApp/html/laonApplication.html" >laonApplication</a></li>
+            <li><a href="/simpleValidateOfLoanApp/html/personnel.html" >personnel information</a></li>
+            <li><a href="/simpleValidateOfLoanApp/html/loanDetails.html" > loan details</a></li>
+            <li><a href="/simpleValidateOfLoanApp/html/finanical.html" > financial details</a></li>
+             
+            
+            
+        </ul>
+    </div>
+    <div class="forms">
+        <form onsubmit="return subform()"  name="personnelDetails">
+            <label for="">name</label>
+            <input type="text" name="" id="user"><br>
+            <p id="err1"> </p><br>
+            <br>
+            <label for="">phone no</label>
+            <input type="" name="" id="phone"><br>
+            <p id="err2"> </p><br><br>
+            <label>email</label>
+            <input type="email" name="" id="emails"><br>
+            <p id="err3"> </p><br><br>
+            <label>gender</label><br><br>
+            <input type="radio" name="gender" id="">male
+            <input type="radio" name="gnder" id="">female
+            <input type="radio" name="gender" id="">rather not to say<br>
+            <p id="err6"> </p><br><br>
+            <br>
+            <label for="">martial status</label><br><br>
+            <input type="checkbox" name="status" id="">married
+            <input type="checkbox" name="status" id="">unmarried<br>
+            <p id="err7"> </p><br><br>
+
+            <label for="">age</label>
+            <input type="number" name="" id="ages"><br>
+            <p id="err4"> </p><br><br>
+            <label for="">dob</label>
+            <input type="date" name="" id="dates"><br>
+            <p id="err5"> </p><br><br>
+            <input type="submit" value="submit">
+            <input type="reset" value="reset" id="reset">
+            <script>
+                    var a1=document.getElementById("user");
+                    var b1=document.getElementById("phone");
+                    var c2=document.getElementById("emails");
+                    var d3=document.getElementById("ages");
+                    var e4=document.getElementById("dates");
+                function subform(){
+                    
+                    
+                    if(a1.value==''){
+                       // alert("please enter the value for loan");
+                        document.getElementById("err1").innerHTML="enter a user name ";
+                        values=0;
+                        
+                    }
+                    else{
+                        document.getElementById("err1").innerHTML=" ";
+                        values=1;
+                    }
+                    if(b1.value==''){
+                       // alert("please enter the value for loan");
+                        document.getElementById("err2").innerHTML="enter password ";
+                        values=0;
+                        
+                    }
+                    else{
+                        document.getElementById("err2").innerHTML=" ";
+                        values=1;
+                    }
+                    if(c2.value==''){
+                       // alert("please enter the value for loan");
+                        document.getElementById("err3").innerHTML="enter email ";
+                        values=0;
+                        
+                    }
+                    else{
+                        document.getElementById("err3").innerHTML=" ";
+                        values=1;
+                    }
+                    if(d3.value==''){
+                       // alert("please enter the value for loan");
+                        document.getElementById("err4").innerHTML="enter age ";
+                        values=0;
+                        
+                    }
+                    else{
+                        document.getElementById("err4").innerHTML=" ";
+                        values=1;
+                    }
+                    if(e4.value==''){
+                       // alert("please enter the value for loan");
+                        document.getElementById("err5").innerHTML="enter date ";
+                        values=0;
+                        
+                    }
+                    else{
+                        document.getElementById("err5").innerHTML=" ";
+                        values=1;
+                    }
+                   
+                    let chosenOption = "";
+                    const len = document.personnelDetails.gender.length;
+
+                    for (i = 0; i < len; i++) {
+                      if (document.personnelDetails.gender[i].checked) {
+                        chosenOption = document.personnelDetails.gender[i].value
+                    }
+                     }
+
+                   if (chosenOption == "") {
+                     document.getElementById("err6").innerHTML="select a gender ";
+                         values=0;
+                    
+                    } else {
+                     document.getElementById("err6").innerHTML=" ";
+                       values=0;
+                      }
+                      let chosenOptions = "";
+                    const lens = document.personnelDetails.status.length;
+
+                    for (i = 0; i < lens; i++) {
+                      if (document.personnelDetails.status[i].checked) {
+                        chosenOptions = document.personnelDetails.status[i].value
+                    }
+                     }
+
+                   if (chosenOptions == "") {
+                     document.getElementById("err7").innerHTML="select a martial status ";
+                         values=0;
+                    
+                    } else {
+                     document.getElementById("err7").innerHTML=" ";
+                       values=0;
+                      }
+
+
+                if(values){
+                      return true;
+                    }
+                 else{
+                     return false;
+                    }
+                }
+            </script>
+            
+            
+        </form>
+
+    </div>
+    <section id="footer">
+        <h3>services</h3>
+        <h3>customer care</h3>
+        <h3>24/7 support</h3>
+        <h3><a href="https://www.google.com">google.com</a></h3>
+        <h3><a href="http://www.facebook.com">facebook.com</a></h3>
+        <h3><a href="http://www.instagram.com">instagram.com</a></h3>
+        <h3><a href="http://">loan.com</a></h3>
+        
+</section>
+<section id="sub_foot">
+    <h3>&#9400;	images are copyright to your loan application</h3>
+
+</section>
+</body>
+</html>

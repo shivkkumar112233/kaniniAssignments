@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: black;
+            padding: 12px;
+            width:500px;
+            height:500px;
+            display:flex;
+            flex-flow:wrap ;
+            text-align: center;
+            border-radius: 18px;
+            align-content: center;
+            
+
+        }
+        .item{
+               width:80px;
+               height:50px;
+               color:black;
+               background-color: rgb(237, 245, 245);
+               padding:10px;
+               margin: 12px;
+               border-radius: 20px;
+               font-size: x-large;
+              
+             
+              
+
+
+        }
+        #items{
+            width: 100%;
+            padding:10px;
+            
+        }
+        input{
+            width:100%;
+            height: 100%;
+            border-radius: 5px;
+            border: none;
+        }
+        .item:hover{
+            box-shadow: 12px 12px 12px red;
+        }
+        
+    </style>
+    <script>
+          
+          
+            function buttonclick(num){
+                var res =document.getElementById("in");
+                res.value+=num;
+            }
+            function re(){
+                var res =document.getElementById("in");
+                res.value=eval(res.value);
+            }
+            function cle(){
+                var res =document.getElementById("in");
+                res.value="";
+            }
+            
+            
+
+
+            
+        
+    </script>
+</head>
+<body>
+    <div class="container" >
+        <div class="item" id="items">
+            <input type="text"   id="in">
+        </div>
+        <div class="item" onclick="buttonclick( 9 )">
+          9 
+        </div>
+        <div class="item" onclick="buttonclick(8)">
+            8
+        </div>
+        <div class="item" onclick="buttonclick(7)">
+            7
+        </div>
+        <div class="item" onclick="buttonclick('+' )">
+            
+            +
+        </div>
+        <div class="item" onclick="buttonclick(6)" >
+            6
+        </div>
+        <div class="item" onclick="buttonclick(5 )" >
+            5
+        </div>
+        <div class="item" onclick="buttonclick(4 )" >
+            4
+        </div>
+        <div class="item" onclick="buttonclick('-' )">
+            -
+        </div>
+        <div class="item" onclick="buttonclick(3 )">
+            3
+        </div>
+        <div class="item" onclick="buttonclick(2 )">
+            2
+        </div>
+        <div class="item" onclick="buttonclick(1 )">
+            1
+        </div>
+        <div class="item" onclick="buttonclick('/' )">
+            /
+        </div>
+        <div class="item" onclick="buttonclick(0 )">
+            0
+        </div>
+        <div class="item" onclick="buttonclick('*' )">
+            *
+        </div>
+        <div class="item" onclick="re()" >
+            =
+            
+        </div>
+        <div class="item" onclick="cle()" >
+            c
+            
+        </div>
+
+    </div>
+</body>
+</html>

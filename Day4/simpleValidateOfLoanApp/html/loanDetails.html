@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main_header{
+            background-color: #0914f0;
+        }
+        #img_1{
+            border-radius: 50%;
+        }
+        .head{
+            color: white;
+            padding: 10px;
+            margin: 12px;
+            font-size: xx-large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-transform: capitalize;
+            position: relative;
+            left:-400px;
+            float:right;
+        }
+        ul{
+            list-style-type: none;
+            cursor: pointer;
+           
+           padding: 10px;
+           
+
+        }
+        .sub_header{
+            background-color:  rgb(54, 160, 231);
+            padding: 10px;
+            
+        }
+        li{
+            display: inline;
+            padding: 18px;
+            color: blue;
+            font-size: larger;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            
+        }
+        .form{
+            background-color: azure;
+            padding: 12px;
+        }
+        #footer{
+        height: 200px;
+        background-color: black;
+        color: white;
+        column-count: 2;
+       
+       }
+       #sub_foot{
+        background-color: rgb(48, 47, 47);
+        color: white;
+        padding: 10px;
+       }
+       h3{
+        text-align: center;
+       }
+       a{
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+       }
+       li a:hover{
+        cursor: pointer;
+        color:blue
+       }
+       p{
+        color: red;
+        font-family: 'Times New Roman', Times, serif;
+    
+       }
+       #err3{
+        color: black;
+       }
+    </style>
+</head>
+<body>
+    <div class="main_header">
+        <div class="heads">
+            <img src="/simpleValidateOfLoanApp/images/th.jpeg" alt=""  id=" img_1" width="100px" >
+            <div class="head">
+                your loan application
+            </div>
+
+        </div>
+    </div>
+   
+    <div class="sub_header">
+        <ul>
+            <li><a href="/simpleValidateOfLoanApp/html/laonApplication.html" >laonApplication</a></li>
+            <li><a href="/simpleValidateOfLoanApp/html/personnel.html" >personnel information</a></li>
+            <li><a href="/simpleValidateOfLoanApp/html/loanDetails.html" > loan details</a></li>
+            <li><a href="/simpleValidateOfLoanApp/html/finanical.html" > financial details</a></li>
+             
+            
+            
+        </ul>
+    </div>
+    <div class="form">
+        <h2> loan details</h2>
+        <form onsubmit="return subForm1()" name="loanType">
+            <label for="">loan amount</label>
+            <input type="number" name="" id="aumt"><br>
+            <p id="err1"></p>
+            <br>
+            <label for=""> tenture</label>
+            <input type="number" name="" id="tent"><br>
+            <p id="err2"></p>
+            <br>
+            <label for="">loan type</label><br><br>
+            <input type="checkbox" name="loan" id="" class="checks">personnel
+            <input type="checkbox" name="loan" id="" class="checks">home<br>
+            <p id="err4"></p>
+            <br>
+           
+            <label>cibil score</label>
+            <input type="range" value="20000" min="10000" max="1000000" onmousemove="disRange()" id="ranges"><br>
+            <p id="err3"></p>
+
+            <br>
+            <input type="submit" value="submit">
+            <script>
+                   var a=document.getElementById("aumt");
+                    var b=document.getElementById("tent");
+                   
+                    var values=0;
+                    
+                function subForm1(){ 
+                    
+                    if(a.value==''){
+                       // alert("please enter the value for loan");
+                        document.getElementById("err1").innerHTML="enter amount ";
+                        values=0;
+                       
+                    }
+                    else{
+                        document.getElementById("err1").innerHTML=" ";
+                        values=1;
+                    }
+                    if(b.value==''){
+                       // alert("please enter the value for loan");
+                        document.getElementById("err2").innerHTML="enter a tenture ";
+                        values=0;
+                        
+                    }
+                    else{
+                        document.getElementById("err2").innerHTML=" ";
+                        values=1;
+                    }
+                    let con="";
+                    const len=document.loanType.loan.length;
+                    for(let i=0;i<len;i++){
+                        if(document.loanType.loan[i].checked){
+                            con=document.loanType.loan[i].value
+                        }
+                    }
+                    if (con == "") {
+                     document.getElementById("err4").innerHTML="select a loan type ";
+                         values=0;
+                    
+                    } else {
+                     document.getElementById("err4").innerHTML=" ";
+                       values=0;
+                      }
+                    if(values){
+                      return true;
+                    }
+                 else{
+                     return false;
+                    }
+                }
+                function disRange(){
+                  let y=  document.getElementById("ranges").value;
+                  document.getElementById("err3").innerHTML=y;
+                }
+            </script>
+        </form>
+
+    </div>
+    <section id="footer">
+        <h3>services</h3>
+        <h3>customer care</h3>
+        <h3>24/7 support</h3>
+        <h3><a href="https://www.google.com">google.com</a></h3>
+        <h3><a href="http://www.facebook.com">facebook.com</a></h3>
+        <h3><a href="http://www.instagram.com">instagram.com</a></h3>
+        <h3><a href="http://">loan.com</a></h3>
+        
+</section>
+<section id="sub_foot">
+    <h3>&#9400;	images are copyright to your loan application</h3>
+
+</section>
+</body>
+</html>
