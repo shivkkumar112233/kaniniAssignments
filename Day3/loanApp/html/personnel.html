@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function submit(){
+            let userName=document.getElementById("user").value;
+            console.log(userName);
+            if(userName==""){
+                alert("please enter username");
+            }
+        }
+    </script>
+    <style>
+        .main_header{
+            background-color: #0914f0;
+        }
+        #img_1{
+            border-radius: 50%;
+        }
+        .head{
+            color: white;
+            padding: 10px;
+            margin: 12px;
+            font-size: xx-large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-transform: capitalize;
+            position: relative;
+            left:-400px;
+            float:right;
+        }
+        ul{
+            list-style-type: none;
+            cursor: pointer;
+           
+           padding: 10px;
+           
+
+        }
+        .sub_header{
+            background-color: rgb(54, 160, 231);
+            padding: 10px;
+            
+        }
+        li{
+            display: inline;
+            padding: 18px;
+            color: blue;
+            font-size: larger;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            
+        }
+        .form{
+            background-color: azure;
+            padding: 12px;
+        }
+        #footer{
+        height: 200px;
+        background-color: black;
+        color: white;
+        column-count: 2;
+       
+       }
+       #sub_foot{
+        background-color: rgb(48, 47, 47);
+        color: white;
+        padding: 10px;
+       }
+       h3{
+        text-align: center;
+       }
+       a{
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+       }
+       li a:hover{
+        cursor: pointer;
+       }
+       form{
+        padding: 12px;
+        margin: 12px;
+        position: relative;
+        left:300px;
+        border-radius: 12px;
+        border: 1px solid;
+        width:fit-content
+       }
+       label{
+        font-family: 'Times New Roman', Times, serif;
+       }
+       #reset{
+        position: relative;
+        left:50px;
+       }
+
+    </style>
+</head>
+<body>
+   
+    <div class="main_header">
+        <div class="heads">
+            <img src="/loanApp/images/th.jpeg" alt=""  id=" img_1" width="100px" >
+            <div class="head">
+                your loan application
+            </div>
+
+        </div>
+    </div>
+   
+    <div class="sub_header">
+        <ul>
+            <li><a href="/loanApp/html/laonApplication.html" >laonApplication</a></li>
+            <li><a href="/loanApp/html/personnel.html" >personnel information</a></li>
+            <li><a href="/loanApp/html/loanDetails.html" > loan details</a></li>
+            <li><a href="finanical.html" > financial details</a></li>
+             
+            
+            
+        </ul>
+    </div>
+    <div class="form">
+            <label for="">name</label>
+            <input type="text" name="" id="user"><br>
+            <br>
+            <label for="">phone no</label>
+            <input type="" name="" id="phone"><br><br>
+            <label>email</label>
+            <input type="email" name="" id="email"><br><br>
+            <label>gender</label><br><br>
+            <input type="radio" name="" id="">male
+            <input type="radio" name="" id="">female
+            <input type="radio" name="" id="">rather not to say<br><br>
+            <label for="">martial status</label><br><br>
+            <input type="checkbox" name="" id="">married
+            <input type="checkbox" name="" id="">unmarried<br><br>
+            <label for="">age</label>
+            <input type="number" name="" id="age"><br><br>
+            <label for="">dob</label>
+            <input type="date" name="" id="date"><br><br>
+            <input type="submit" value="submit" onclick="subform()">
+            <input type="reset" value="reset" id="reset">
+            <script>
+
+                
+                function subform(){
+                     a=document.getElementById("user").value;
+                     b=document.getElementById("phone").value;
+                     c=document.getElementById("age").value;
+                     d=document.getElementById("date").value;
+                    
+                    if(a==''){
+                        alert("please enter username");
+                    }
+                    if(b==''){
+                        alert("please enter phone number");
+                    }
+                    if(c==''){
+                        alert("please enter age");
+                    }
+                    if(d==''){
+                        alert("please enter date");
+                    }
+                    if(c<=18){
+                        alert("your are not eligible");
+                    }
+            
+                  
+                }
+                
+            </script>
+            
+
+    </div>
+    <section id="footer">
+        <h3>services</h3>
+        <h3>customer care</h3>
+        <h3>24/7 support</h3>
+        <h3><a href="https://www.google.com">google.com</a></h3>
+        <h3><a href="http://www.facebook.com">facebook.com</a></h3>
+        <h3><a href="http://www.instagram.com">instagram.com</a></h3>
+        <h3><a href="http://">loan.com</a></h3>
+        
+</section>
+<section id="sub_foot">
+    <h3>&#9400;	images are copyright to your loan application</h3>
+
+</section>
+</body>
+</html>

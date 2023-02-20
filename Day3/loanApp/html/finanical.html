@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main_header{
+            background-color: #0914f0;
+        }
+        #img_1{
+            border-radius: 50%;
+        }
+        .head{
+            color: white;
+            padding: 10px;
+            margin: 12px;
+            font-size: xx-large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-transform: capitalize;
+            position: relative;
+            left:-400px;
+            float:right;
+        }
+        ul{
+            list-style-type: none;
+            cursor: pointer;
+           
+           padding: 10px;
+           
+
+        }
+        .sub_header{
+            background-color: rgb(54, 160, 231);
+            padding: 10px;
+            
+        }
+        li{
+            display: inline;
+            padding: 18px;
+            color: blue;
+            font-size: larger;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            
+        }
+        .form{
+            background-color: azure;
+            padding: 12px;
+        }
+        #footer{
+        height: 200px;
+        background-color: black;
+        color: white;
+        column-count: 2;
+       
+       }
+       #sub_foot{
+        background-color: rgb(48, 47, 47);
+        color: white;
+        padding: 10px;
+       }
+       h3{
+        text-align: center;
+       }
+       a{
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+       }
+       li a:hover{
+        cursor: pointer;
+       }
+       form{
+        padding: 12px;
+        margin: 12px;
+        position: relative;
+        left:300px;
+        border-radius: 12px;
+        border: 1px solid;
+        width:fit-content
+       }
+       label{
+        font-family: 'Times New Roman', Times, serif;
+       }
+       #reset{
+        position: relative;
+        left:50px;
+       }
+       #sub{
+        position: relative;
+        left: 50px;
+       }
+
+    </style>
+    
+
+</head>
+<body>
+    <div class="main_header">
+        <div class="heads">
+            <img src="/loanApp/images/th.jpeg" alt=""  id=" img_1" width="100px" >
+            <div class="head">
+                your loan application
+            </div>
+
+        </div>
+    </div>
+   
+    <div class="sub_header">
+        <ul>
+            <li><a href="/loanApp/html/laonApplication.html" >laonApplication</a></li>
+            <li><a href="/loanApp/html/personnel.html" >personnel information</a></li>
+            <li><a href="/loanApp/html/loanDetails.html" > loan details</a></li>
+            <li><a href="finanical.html" > financial details</a></li>
+             
+            
+            
+        </ul>
+    </div>
+    <div class="form">
+        <form>
+          <label for="">salary</label>
+          <input type="number" name="" id="sal"><br><br>
+          <label>yearly income</label>
+          <input type="number" name="" id="yearIncome"><br><br>
+          <label>monthly expenses</label>
+          <input type="number" name="" id="exp"><br><br>
+          <input type="submit" value="submit" id="sub" onclick="subForm1()">
+            
+            <script>
+                function subForm1(){
+                    var a=document.getElementById("sal").value;
+                    var b=document.getElementById("yearIncome").value;
+                    var c=document.getElementById("exp").value;
+                    if(a==''){
+                        alert("please enter the value for salary");
+                    }
+                    if(b==''){
+                        alert("please enter the value for yearly income");
+                    }
+                    if(c==''){
+                        alert("please enter the value for expenses");
+                    }
+                    
+                }
+            </script>
+        </form>
+        <p>click here to watch previous loan details</p>
+        <button onclick="dis()">click here</button>
+        <script>
+            function dis(){
+                alert("the details will be sent to your register phone number");
+            }
+        </script>
+
+    </div>
+    <section id="footer">
+        <h3>services</h3>
+        <h3>customer care</h3>
+        <h3>24/7 support</h3>
+        <h3><a href="https://www.google.com">google.com</a></h3>
+        <h3><a href="http://www.facebook.com">facebook.com</a></h3>
+        <h3><a href="http://www.instagram.com">instagram.com</a></h3>
+        <h3><a href="http://">loan.com</a></h3>
+        
+</section>
+<section id="sub_foot">
+    <h3>&#9400;	images are copyright to your loan application</h3>
+
+</section>
+</body>
+</html>
