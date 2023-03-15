@@ -1,0 +1,159 @@
+
+  body{
+    margin: 0;
+    background-image: url('/images/b1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #mainText{
+    
+    text-align: center;
+    font-family: 'Rozha One';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 70px;
+    color: #2F2F2F;
+    }
+    #subText{
+      
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+   line-height: 41px;
+   color: #2F2F2F;
+   font-weight: bolder;
+    }
+    #searchSection{
+       
+    border: 1px ;
+    width: 62%;
+    height: 100%;
+    padding: 12px;
+    display: inline-flex;
+    position: relative;
+    left: 280px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0px 0px 53px 2px rgba(65, 73, 178, 0.2);
+    top: 80px; 
+     
+    }
+    input{
+    border: none;
+    padding: 6px;
+    }
+    .searchContent{
+    width: 70%;
+    outline: none;
+    font-size: 24px;
+     
+     
+    }
+    #searchLogo{
+        width: 25px;
+        height: 25px;
+      background-image: url('/images/Union.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color:  rgba(0, 120, 255, 1);
+      border-radius: 50px;
+     padding: 6px; 
+    }
+    .container{
+        display: block;
+        padding: 12px;
+        margin: 12px; 
+        
+    }
+    #trendingSecTitle{
+        text-align: center;
+        padding: 12px;
+        font-size: 22px;
+        font-weight: 200;
+        font-family: 'Inter';
+        font-size: 22px;
+        line-height: 27px;
+        font-weight: bold; 
+    }
+    .flexContainerTrendLogo{
+        display: flex;
+        justify-content:center;
+    }
+    .flex-items{
+       width: 100px;
+       height: 100px;
+       border-radius: 50%;
+       background-color: white;
+      margin: 28px;
+      
+  
+    }
+    #logo1{
+        background-image: url('/images/a1.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #logo2{
+        background-image: url('/images/b.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #logo3{
+        background-image: url('/images/r.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #logo4{
+        background-image: url('/images/d.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #logo5{
+        background-image: url('/images/e.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .trendingSection{
+        position: relative;
+        top: 180px;
+     }
+    #logo {
+  width: 130px;
+  height: 65px;
+}
+
+.header {  
+  height: 75px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(86, 86, 86, 0.07);
+}
+#headerNav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+
+#logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0078ff;
+  border-radius: 50px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #0078ff;
+  background: none;
+}

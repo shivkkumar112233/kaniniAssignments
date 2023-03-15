@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link
+href="https://fonts.googleapis.com/css?family=Rozha One|Inter"
+rel="stylesheet"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="/css/mainSection.css"> -->
+
+<style>
+  .header {  
+  height: 75px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(86, 86, 86, 0.07);
+}
+#headerNav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+body{
+    margin: 0;
+    background-image:linear-gradient(180.06deg, #D4EBFF 0.05%, rgba(219, 226, 232, 0.47) 99.95%), url('/images/b1.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+   
+    /* background: linear-gradient(180.06deg, #D4EBFF 0.05%, rgba(219, 226, 232, 0.47) 99.95%); */
+
+  }
+
+#logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0078ff;
+  border-radius: 50px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #0078ff;
+  background: none;
+}
+  .container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+ 
+  
+  }
+  #containerr{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin-top: 50px;
+    
+  }
+  #mainText{
+    font-size: 80px;
+  }
+  #subText{
+    
+    font-size: 32px;
+    margin-bottom: 90px;
+   
+    
+  }
+  #searchSection{
+       
+       border: 1px ;
+       width: 62%;
+       height: 100%;
+       padding: 12px;
+       display: inline-flex;
+       border-radius: 50px;
+       background-color: white;
+       box-shadow: 0px 0px 53px 2px rgba(65, 73, 178, 0.2);
+       margin-bottom: 100px;
+       
+        
+       }
+       /* .main{
+        background: linear-gradient(180.06deg, #D4EBFF 0.05%, rgba(219, 226, 232, 0.47) 99.95%);
+        margin: 0px;
+        padding: 0px;
+       } */
+       
+       input{
+       border: none;
+       padding: 6px;
+       }
+       .searchContent{
+       width: 70%;
+       outline: none;
+       font-size: 24px;
+        
+        
+       }
+       #searchLogo{
+           width: 25px;
+           height: 25px;
+         background-image: url('/images/Union.png');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-color:  rgba(0, 120, 255, 1);
+         border-radius: 50px;
+        padding: 6px; 
+       }
+       .trendingSection{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap:2px;
+       }
+       .flexContainerTrendLogo{
+        display: inline-flex;
+       }
+       #logo1{
+        background-image: url('/images/a1.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #logo2{
+        background-image: url('/images/b.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #logo3{
+        background-image: url('/images/r.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #logo4{
+        background-image: url('/images/d.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #logo5{
+        background-image: url('/images/e.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .flex-items{
+       width: 100px;
+       height: 100px;
+       border-radius: 50%;
+       background-color: white;
+      margin: 28px;
+      
+  
+    }
+    #trendingSecTitle{
+      
+      font-size: 25px;
+    }
+   
+    #backGroungImage1{
+      position: absolute;
+     left: 30px;
+  
+    }
+    #backGroungImage2{
+      position: absolute;
+      right: 50px;
+     
+    }
+    #backGroungImage3{
+      position: absolute;
+      right:0px;
+      align-items: end;
+    }
+       
+</style>
+<body>
+   
+    <header class="header">
+        <nav id="headerNav">
+          <div id="KaniniLogo">
+            <img
+              src="../images/Kanini-Logo.svg"
+              alt="KaniniLogo"
+              id="logo"
+              class="img-fluid"
+            />
+          </div>
+          <div>
+            <button id="logout">
+              <img src="../images/LockImage.svg" id="lockImage" alt="" />
+              Logout
+            </button>
+          </div>
+        </nav>
+      </header>
+ 
+ <div class="main">
+  <img src="/images/r1.png" alt="" id="backGroungImage1"srcset="">
+     <div class="flexs" id="containerr">
+      <!-- <img src="/images/r1.png" alt="" id="backGroungImage1"srcset=""> -->
+      <div id='mainText'>Investing Search Engine</div>
+      <div  id="subText">The Modern Stock Screener that helps you pick better stocks</div>
+      <div id="searchSection" class="s"><div id="searchLogo"></div><input placeholder="search for stocks" class="searchContent"></div>
+      <img src="/images/Rectangle.png" alt="hi" srcset="" id="backGroungImage2">
+    </div>
+    <div class="trendingSection">
+        <div id="trendingSecTitle">
+            What's Trending
+        </div>
+       <div class="flexContainerTrendLogo">
+          <div class="flex-items" id="logo1" ></div>
+          <div class="flex-items" id='logo2'></div>
+          <div class="flex-items" id="logo3"></div>
+          <div class="flex-items" id="logo4"></div>
+          <div class="flex-items" id="logo5"></div>
+          <img src="/images/r2.png" alt="" id="backGroungImage3" srcset="">
+        </div>
+    </div>
+  </div>
+</div>
+  
+</body>
+</html>
